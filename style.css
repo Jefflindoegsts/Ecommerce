@@ -1,42 +1,20 @@
-
+@font-face {
+  font-family: 'BreeSerif';
+  src: url('fontes/BreeSerif-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+  body {
+      font-family: 'url(BreeSerif-Regular)', serif;
+      background-color: #f4f4f9;
+      color: #333;
+      line-height: 1.6;
+    }
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-body {
-    background-image: url('imgsEcomerce/SITE EcoLuxo (1).png'); 
-    background-size: cover;    
-    background-position: center;  
-    background-repeat: no-repeat; 
-    min-height: 100vh;            
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #d7ede3;
-    padding: 15px 40px;
-    transition: 0.3s;
-}
-
-header .logo {
-    display: flex;
-    align-items: center;
-}
-
-header nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-    color: #0a4d1c;
-}
-
-header nav a:hover {
-    color: #1e9b50;
+    
 }
 
 .menu-secundario {
@@ -49,7 +27,7 @@ header nav a:hover {
 
 .menu-secundario a {
     color: #d7ede3;
-    font-weight: bold;
+    font-weight: normal;
     text-decoration: none;
 }
 
@@ -59,6 +37,7 @@ header nav a:hover {
 
 .produtos-secao {
     padding: 30px;
+    text-align: center;
 }
 
 .produtos-secao h2 {
@@ -68,14 +47,16 @@ header nav a:hover {
     border-radius: 30px;
     color: #0a4d1c;
     margin-bottom: 30px;
+    margin-left: auto;  
+    margin-right: auto;  
 }
 
 .produtos-scroll {
     display: flex;
-    overflow-x: auto;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
     padding-bottom: 20px;
-    scroll-behavior: smooth;
 }
 
 
@@ -118,12 +99,14 @@ header nav a:hover {
     font-size: 2.5rem;
     margin-bottom: 20px;
     color: #2c3e50;
+    text-align: left;
 }
 
 .quem-somos p {
     font-size: 1.1rem;
     line-height: 1.8;
     color: #34495e;
+    text-align: left;
 }
 
 .apresentacoes {
@@ -134,98 +117,37 @@ header nav a:hover {
     overflow: hidden;
     position: relative;
     border-radius: 15px;
+
+  }
+.contato {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 50px auto;
+    text-align: center;
+    flex-wrap: wrap; 
 }
 
-.rodape {
-    background-color: #196319;
-    color: #fff;
-    padding: 40px 20px 20px 20px;
-    font-family: 'Segoe UI', sans-serif;
-    z-index: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  }
-  
-  .footer-container {
+
+.item {
     display: flex;
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 90px; 
-  }
+    flex-direction: column;
+    align-items: center;
+}
+
+.item img {
+    max-width: 150px;
+    height: auto;
+}
+
+.item p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+
   
-  .footer-coluna h3, .footer-coluna h4 {
-    margin: 0;
-    padding: 0;
-    font-weight: normal;
-    color: #fff;
-  }
-  
-  .footer-coluna {
-    min-width: 20px;
-    margin-bottom: 30px;
-  }
-  
-  .footer-coluna h3 {
-    color: #79f830;
-    font-size: 22px;
-    margin-bottom: 10px;
-  }
-  
-  .footer-coluna h4 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #ddd;
-  }
-  
-  .footer-coluna ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .footer-coluna ul li {
-    margin-bottom: 8px;
-  }
-  
-  .footer-coluna ul li a {
-    color: #bbb;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  
-  .footer-coluna ul li a:hover {
-    color: #faffe1ad;
-  }
-  
-  .footer-pagamentos h4 {
-    color: #91d650;
-    margin-bottom: 15px;
-    text-align: left;
-    font-size: 22px;
-  }
-  
-  .pagamentos-icones {
-    display: flex;
-    gap:20px;
-    justify-content: flex-start;
-  }
-  
-  .footer-pagamentos i {
-    font-size: 36px;
-    margin-right: 15px;
-    vertical-align: middle;
-  }
-  .footer-bottom {
-    border-top: 1px solid #333;
-    text-align: center;
-    padding-top: 5%;
-    font-size: 80%;
-    color: #888;
-    margin-top: 20px;
-  }
-  
-  /*começo do slider*/
   .apresentacoes{
     margin: 0 auto;
     width: 800px;
@@ -275,33 +197,142 @@ header nav a:hover {
   .manual-btn:hover{
     background-color: #fff;
   }
+  
 
+/* Essa parte precisa de att*/
 
-  .first {
-    width: 25%; /* se estiver mostrando 1 slide por vez */
-    transition: margin-left 0.5s;
+.integrantes { text-align: center; margin: 50px auto; max-width: 900px; padding: 0 16px; }
+.integrantes h2 { margin-bottom: 18px; color: #0a4d1c; font-size: 2rem; }
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #f6f8f6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.6s ease;
+  will-change: transform;
+  touch-action: pan-y;
+}
+
+.slide {
+  min-width: 100%;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.slide img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.slide p {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.45);
+  color: #fff;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 6;
+}
+.prev { left: 12px; }
+.next { right: 12px; }
+
+.prev:hover, .next:hover { background-color: rgba(0,0,0,0.65); }
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #0a4d1c;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 480px) {
+  body {
+  text-align: center;
+ align-items: flex-start;
   }
 
-  #radio1:checked ~ .first{
-    margin-left:0;
+  .menu-secundario {
+    gap: 15px;
+    align-items: center;
   }
 
-  #radio2:checked ~ .first{
-    margin-left:-25%;
+  .produtos-scroll {
+    gap: 15px;
   }
 
-  #radio3:checked ~ .first{
-    margin-left:-50%;
+  .card {
+    width: 95%;
+    align-items: center;
   }
 
-  #radio4:checked ~ .first{
-    margin-left:-75%;
+  .apresentacoes {
+    height: 200px;
   }
 
-  #radio5:checked ~ .first{
-    margin-left:-100%;
+  .slider .slide img {
+    width: 120px;
+    height: 120px;
   }
 
-  #radio6:checked ~ .first{
-    margin-left:-125%;
+  .item img {
+    max-width: 100px;
+    align-items: center;
   }
+
+  .quem-somos h1,
+  .integrantes h2 {
+    font-size: 1.5rem;
+  }
+
+  .quem-somos p {
+    font-size: 0.95rem;
+  }
+
+   .footer-container {
+    text-align: center;
+  }
+
+  .rodape, 
+  .footer-container {
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}

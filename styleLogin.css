@@ -1,9 +1,15 @@
+@font-face {
+    font-family: 'BreeSerif';
+    font-style: normal;
+    font-weight: normal;
+    src: url('fontes/BreeSerif-Regular.ttf');
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: BreeSerif, sans-serif;
 }
 
 body {
@@ -13,6 +19,7 @@ body {
     background-repeat: no-repeat; 
     min-height: 100vh;            
 }
+
 .logo{
     display: flex;
     align-items: center;
@@ -21,7 +28,6 @@ body {
 }
 
 
-/* Container do login */
 .login-container {
     flex: 1;
     display: flex;
@@ -30,7 +36,6 @@ body {
     padding: 50px 20px;
 }
 
-/* Caixa de login */
 .login-box {
     background: #cfe7d6;
     padding: 40px 30px;
@@ -62,7 +67,6 @@ body {
     font-size: 15px;
 }
 
-/* Labels e Inputs */
 .login-box label {
     display: block;
     text-align: left;
@@ -88,7 +92,6 @@ body {
     box-shadow: 0 0 5px rgba(0, 149, 80, 0.4);
 }
 
-/* Botões */
 .btn-login,
 .btn-criar,
 .btn-voltar {
@@ -128,24 +131,15 @@ body {
 }
 
 .btn-voltar {
-    background: #147039;
-    color: #fff;
+    color: #000000;
 }
 
-.btn-voltar:hover {
-    background: #0a4d1c;
-    transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
-
-/* Texto adicional */
 .criar {
     margin-top: 15px;
     color: #0a4d1c;
     font-size: 14px;
 }
 
-/* Responsividade */
 @media (max-width: 500px) {
     .login-box {
         padding: 30px 20px;

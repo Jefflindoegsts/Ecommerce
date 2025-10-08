@@ -1,0 +1,207 @@
+  @font-face {
+      font-family: 'BreeSerif';
+      src: url('fontes/BreeSerif-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: BreeSerif, sans-serif;
+}
+
+body {
+    background-image: url('imgsEcomerce/SITE\ EcoLuxo\ \(1\).png'); 
+    background-size: cover; 
+    background-position: center;  
+    background-repeat: no-repeat; 
+    min-height: 100vh;            
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #d7ede3;
+  padding: 15px 40px;
+  transition: 0.3s;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+header .logo img {
+  height: 80px;
+  width: auto;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+}
+
+header nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #0a4d1c;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+header nav a:hover {
+  color: #1e9b50;
+}
+
+   
+
+    main {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    main h1 {
+      text-align: center;
+      margin-bottom: 10px;
+      color: #196319;
+    }
+
+    main p {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 18px;
+      color: #555;
+    }
+
+
+    /*PARTE DO RODAPE E FOOTER*/
+    .rodape {
+      background-color: #196319;
+      color: #fff;
+      padding: 40px 20px 20px;
+    }
+
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-coluna h3,
+    .footer-coluna h4 {
+      margin-bottom: 10px;
+      color: #40a048;
+    }
+
+    .footer-coluna ul {
+      list-style: none;
+    }
+
+    .footer-coluna ul li {
+      margin-bottom: 8px;
+    }
+
+    .footer-coluna ul li a {
+      color: #fff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .footer-coluna ul li a:hover {
+      color: #88fa88;
+    }
+
+    .footer-pagamentos {
+      text-align: center;
+    }
+
+    .pagamentos-icones img {
+      margin: 5px;
+      vertical-align: middle;
+      width: 30px;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+      padding-top: 10px;
+    }
+
+ @media screen and (max-width: 992px) {
+  header {
+    padding: 15px 20px;
+  }
+  header nav a {
+    margin: 0 10px;
+  }
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 20px;
+    text-align: center;
+  }
+  header nav {
+    flex-direction: column;
+    gap: 8px;
+  }
+  header nav a {
+    margin: 5px 0;
+  }
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 20px;
+    text-align: center;
+  }
+
+  header nav {
+    flex-direction: column;
+    display: none; 
+    width: 100%;
+    gap: 10px;
+  }
+
+  header nav a {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+header nav.active {
+  display: flex;
+  flex-direction: column; 
+  gap: 10px;
+}
